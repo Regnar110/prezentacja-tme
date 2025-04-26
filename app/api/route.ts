@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-	console.log('%c API CALL ', 'background: #222; color: #bada55');
+	console.warn('API CALL');
 	return NextResponse.json({ test: 'test' })
 	
   }

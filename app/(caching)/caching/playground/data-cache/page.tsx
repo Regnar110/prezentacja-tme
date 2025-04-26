@@ -4,7 +4,8 @@ export default async function DataCachePlayground() {
 	await fetch('http://localhost:3000/api', {
 		cache: 'force-cache',
 		next: {
-			tags: ['Data-Cache-Playground-API-Call']
+			tags: ['Data-Cache-Playground-API-Call'],
+			revalidate: 10
 		}
 	})
 

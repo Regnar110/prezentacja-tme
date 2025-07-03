@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {ReactNode} from "react";
+import Link from "next/link";
 
 export default function RoutesPage() {
   return (
@@ -59,6 +61,17 @@ export default async function BlogPost({
                 <li>[[...slug]] - Opcjonalny catch-all segment np. pages/shop/[[...slug]].js będzie odpowiadać /shop albo /shop/clothes, /shop/clothes/tops, /shop/clothes/tops/t-shirts itd...</li>
               </ul>
             </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Przechwytywanie ścieżek</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Link href={"/routes/login"} scroll={false}>
+              {'Otwórz formularz logowania w modalu'}
+            </Link>
           </CardContent>
         </Card>
       </div>

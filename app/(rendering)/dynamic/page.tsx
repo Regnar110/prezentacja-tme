@@ -34,7 +34,7 @@ export default async function DynamicPage() {
 
       <div className="rounded-lg bg-muted p-4">
         <p className="text-sm">
-          <strong>Jak to działa:</strong> Ta strona pobiera nowe dane przy każdym żądaniu. Odśwież stronę, aby zobaczyć nowy cytat. To podejście jest idealne dla 
+          <strong>Jak to działa:</strong> Ta strona pobiera nowe dane przy każdym żądaniu. Odśwież stronę, aby zobaczyć nowy cytat. To podejście jest idealne dla
           stron, które muszą prezentować zawsze aktualne dane lub dane..
         </p>
       </div>

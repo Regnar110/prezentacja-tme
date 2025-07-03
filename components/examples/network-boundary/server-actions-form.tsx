@@ -38,7 +38,7 @@ export default function ServerActionsForm() {
 
   const handleToggle = async (id: string, completed: boolean) => {
     const result = await updateTodoStatus(id, completed)
-    setTodos(prev => prev.map(todo => 
+    setTodos(prev => prev.map(todo =>
       todo.id === result.id ? { ...todo, completed: result.completed } : todo
     ))
   }
@@ -65,8 +65,8 @@ export default function ServerActionsForm() {
 
       <div className="space-y-2">
         {todos.map((todo) => (
-          <div 
-            key={todo.id} 
+          <div
+            key={todo.id}
             className="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm"
           >
             <input

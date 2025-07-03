@@ -18,7 +18,7 @@ async function getData(timeout: number, tag: string) {
 
 async function SlowComponent() {
   const { slip } = await getData(3000, '1');
-  
+
   return (
     <Card>
     <CardHeader>
@@ -35,7 +35,7 @@ async function SlowComponent() {
 
 async function MediumComponent() {
   const { slip } = await getData(2000, '2');
-  
+
   return (
     <Card>
     <CardHeader>
@@ -52,7 +52,7 @@ async function MediumComponent() {
 
 async function FastComponent() {
   const { slip } = await getData(1000, '3');
-  
+
   return (
     <Card>
     <CardHeader>
@@ -86,7 +86,7 @@ export default function StreamingPage() {
       <div className="space-y-4">
         <h1 className="text-4xl font-bold">Renderowanie strumieniowe</h1>
         <p className="text-muted-foreground max-w-2xl">
-          Na tej stronie zastosowany został Streaming co w połączeniu z komponentem Suspense pozwoliło na 
+          Na tej stronie zastosowany został Streaming co w połączeniu z komponentem Suspense pozwoliło na
           progresywne ładowanie komponentów. Dzięki tej strategii renderowania umozliwiamy użytkownikowi interakcję
           z aplikacją zanim wszystkie komponenty się wyrenderują.
         </p>
@@ -109,9 +109,9 @@ export default function StreamingPage() {
       <div className="rounded-lg bg-muted p-4">
         <p className="text-sm">
           <strong>Jak to działa:</strong>
-          Każdy komponent ma inny czas ładowania, ale strona 
+          Każdy komponent ma inny czas ładowania, ale strona
           staje się interaktywna od razu po wejściu na nią.
-          Komponenty są przesyłane strumieniowo od razu jak są gotowe (wyrenderowane), zapewniając 
+          Komponenty są przesyłane strumieniowo od razu jak są gotowe (wyrenderowane), zapewniając
           lepsze wrażenia użytkownika niż czekanie, aż wszystko załaduje się na raz.
         </p>
       </div>

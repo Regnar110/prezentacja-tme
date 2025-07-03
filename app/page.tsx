@@ -40,7 +40,7 @@ export default function Home() {
                 </CardContent>
               </Card>
             </Link>
- 
+
             <Link href="/streaming" prefetch={false}>
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>

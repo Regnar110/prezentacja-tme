@@ -15,8 +15,7 @@ export default async function DynamicPage({ params }: { params: Promise<{ advice
       <div className="space-y-4">
         <h1 className="text-4xl font-bold">Renderowanie Dynamiczne</h1>
         <p className="text-muted-foreground max-w-2xl">
-          Ta strona jest renderowana dynamicznie przy każdym żądaniu. Treść zmienia się przy każdym odświeżeniu,
-          demonstrując pobieranie danych w czasie rzeczywistym.
+          Ta strona jest renderowana dynamicznie przy każdym żądaniu. Treść pobierana jest na nowo przy każdym odświeżeniu oraz zmieniana na bazie dynamicznego parametru w URL.
         </p>
       </div>
 
@@ -33,8 +32,8 @@ export default async function DynamicPage({ params }: { params: Promise<{ advice
 
       <div className="rounded-lg bg-muted p-4">
         <p className="text-sm">
-          <strong>Jak to działa:</strong> Ta strona pobiera nowe dane przy każdym żądaniu. Odśwież stronę, aby zobaczyć nowy cytat. To podejście jest idealne dla 
-          stron, które muszą prezentować zawsze aktualne dane lub dane..
+          <strong>Jak to działa:</strong> Ta strona pobiera nowe dane przy każdym żądaniu. Odśwież stronę, aby na nowo uruchomić proces renderowania. Zmień parametr w URL aby pobrać nowe dane na bazie parametru.
+            To podejście jest idealne dla stron, które muszą prezentować zawsze aktualne dane.
         </p>
       </div>
     </div>

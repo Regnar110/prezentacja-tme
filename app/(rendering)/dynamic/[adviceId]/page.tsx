@@ -1,15 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-export const dynamic = 'force-dynamic'
-
-async function getData() {
-  const response = await fetch('https://api.adviceslip.com/advice')
+async function getData(adviceId: string) {
+  const response = await fetch(`https://api.adviceslip.com/advice/${adviceId}`)
   const data = await response.json()
   return data
 }
 
-export default async function DynamicPage() {
-  const { slip } = await getData()
+export default async function DynamicPage({ params }: { params: Promise<{ adviceId: string }>}) {
+    const { adviceId } = await params;
+    const { slip } = await getData(adviceId)
 
   return (
     <div className="space-y-8">

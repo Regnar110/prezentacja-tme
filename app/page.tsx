@@ -27,7 +27,7 @@ export default function Home() {
               </Card>
             </Link>
 
-            <Link href="/dynamic" prefetch={false}>
+            <Link href="/dynamic/1" prefetch={false}>
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <Zap className="w-8 h-8 mb-2 text-primary" />

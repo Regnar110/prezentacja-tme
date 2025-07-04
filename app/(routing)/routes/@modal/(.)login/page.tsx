@@ -2,7 +2,6 @@
 
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { LoginForm } from '@/components/ui/loginForm';
 import './loginModal.css';
 
 export default function LoginModal() {
@@ -17,7 +16,7 @@ export default function LoginModal() {
 
     return (
         <dialog className={'dialog'} ref={dialogRef} onClose={() => router.back()}>
-            <LoginForm />
+            {'Ten route został przechwycony i pokazany w modalu'}
         </dialog>
     )
 }

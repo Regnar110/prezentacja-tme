@@ -49,18 +49,21 @@ export default async function BlogPost({
 }: { 
   params: Promise<{ slug: string }> 
 }) {
-  const { slug } = await params();
+  const { slug } = await params;
   return <h1>Post: {slug}</h1>
 }`}
             </pre>
-            <div className="mt-4 text-sm text-muted-foreground">
+            <div className="mt-4 mb-4 text-sm text-muted-foreground">
               <p><strong>Typy segmentów dynamicznych:</strong></p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>[slug] - Pojedynczy segment dynamiczny</li>
-                <li>[...slug] - Catch-all segment np. pages/shop/[...slug].js będzie odpowiadać: /shop/clothes albo /shop/clothes/tops, /shop/clothes/tops/t-shirts itd...</li>
-                <li>[[...slug]] - Opcjonalny catch-all segment np. pages/shop/[[...slug]].js będzie odpowiadać /shop albo /shop/clothes, /shop/clothes/tops, /shop/clothes/tops/t-shirts itd...</li>
+                <li>[...slug] - Catch-all segment np. pages/shop/[...slug]/page.js będzie odpowiadać: /shop/clothes albo /shop/clothes/tops, /shop/clothes/tops/t-shirts itd...</li>
+                <li>[[...slug]] - Opcjonalny catch-all segment np. pages/shop/[[...slug]]/page.js będzie odpowiadać /shop albo /shop/clothes, /shop/clothes/tops, /shop/clothes/tops/t-shirts itd...</li>
+
               </ul>
             </div>
+            <Link className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'} href={'/routes/1'}>{'przekieruj do /ROUTES/1'}</Link>
+            <Link className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'} href={'/routes/1/2/3'}>{'przekieruj do /ROUTES/1/2/3'}</Link>
           </CardContent>
         </Card>
 
